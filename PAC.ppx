@@ -25,6 +25,16 @@
   <ChainList />
   <RuleList>
     <Rule enabled="true">
+      <Name>inner-ip</Name>
+      <Targets>10.0.0.0-10.255.255.255;localhost; 127.0.0.1; %ComputerName%;192.168.0.0-192.168.255.255;169.254.0.0-169.254.255.255;172.16.0.0-172.31.255.255;192.168.0.0-192.168.255.255;</Targets>
+      <Action type="Direct" />
+    </Rule>
+    <Rule enabled="true">
+      <Name>Ads</Name>
+      <Targets>*.doubleclick.*</Targets>
+      <Action type="Block" />
+    </Rule>
+    <Rule enabled="false">
       <Name>Localhost</Name>
       <Targets>localhost; 127.0.0.1; %ComputerName%</Targets>
       <Action type="Direct" />
