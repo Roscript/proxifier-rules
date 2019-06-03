@@ -26,7 +26,7 @@
   <RuleList>
     <Rule enabled="true">
       <Name>inner-ip</Name>
-      <Targets>10.0.0.0-10.255.255.255;localhost; 127.0.0.1; %ComputerName%;192.168.0.0-192.168.255.255;169.254.0.0-169.254.255.255;172.16.0.0-172.31.255.255;192.168.0.0-192.168.255.255;</Targets>
+      <Targets>10.0.0.0-10.255.255.255;localhost; 127.0.0.1; %ComputerName%;192.168.0.0-192.168.255.255;169.254.0.0-169.254.255.255;172.16.0.0-172.31.255.255;192.168.0.0-192.168.255.255;218.201.251.104;</Targets>
       <Action type="Direct" />
     </Rule>
     <Rule enabled="true">
@@ -40,8 +40,15 @@
       <Action type="Direct" />
     </Rule>
     <Rule enabled="true">
+      <Name>dev</Name>
+      <Applications>python.exe</Applications>
+      <Targets>*pythonhosted*
+*pypi*</Targets>
+      <Action type="Proxy">100</Action>
+    </Rule>
+    <Rule enabled="true">
       <Name>docker</Name>
-      <Applications>vpnkit.exe</Applications>
+      <Applications>vpnkit.exe;minikube.exe</Applications>
       <Action type="Proxy">100</Action>
     </Rule>
     <Rule enabled="true">
