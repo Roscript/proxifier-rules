@@ -30,6 +30,11 @@
       <Action type="Direct" />
     </Rule>
     <Rule enabled="true">
+      <Name>steam</Name>
+      <Targets>steamcommunity.com</Targets>
+      <Action type="Proxy">100</Action>
+    </Rule>
+    <Rule enabled="true">
       <Name>Ads</Name>
       <Targets>*.doubleclick.*</Targets>
       <Action type="Block" />

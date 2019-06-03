@@ -25,8 +25,8 @@
   <ChainList />
   <RuleList>
     <Rule enabled="true">
-      <Name>Localhost</Name>
-      <Targets>localhost; 127.0.0.1; %ComputerName%</Targets>
+      <Name>inner-ips</Name>
+      <Targets>10.0.0.0-10.255.255.255;localhost; 127.0.0.1; %ComputerName%;192.168.0.0-192.168.255.255;169.254.0.0-169.254.255.255;172.16.0.0-172.31.255.255;192.168.0.0-192.168.255.255;218.201.251.104;</Targets>
       <Action type="Direct" />
     </Rule>
     <Rule enabled="true">
@@ -37,16 +37,6 @@
     <Rule enabled="true">
       <Name>Chrome</Name>
       <Applications>chrome.exe</Applications>
-      <Action type="Direct" />
-    </Rule>
-    <Rule enabled="true">
-      <Name>wsl</Name>
-      <Applications>node</Applications>
-      <Action type="Proxy">100</Action>
-    </Rule>
-    <Rule enabled="true">
-      <Name>IPv6</Name>
-      <Applications>wechatdevtools.exe</Applications>
       <Action type="Direct" />
     </Rule>
     <Rule enabled="true">
